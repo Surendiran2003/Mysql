@@ -6,6 +6,18 @@ SELECT dept_name, SUM(salary) AS total_salary
 FROM instructor
 GROUP BY dept_name; 
 SELECT * FROM department_salary_totals;
++-----------+-------------+
+| dept_name | sum(salary) |
++-----------+-------------+
+| biology   |      138000 |
+| comp.sci  |      232000 |
+| elec.eng  |       80000 |
+| finance   |      170000 |
+| history   |      122000 |
+| music     |       40000 |
+| physics   |      182000 |
++-----------+-------------+
+7 rows in set (0.000 sec)
 -- 3.Create a role of student
 CREATE ROLE student;
 -- 4.Give select privileges on the view faculty to the role student.
