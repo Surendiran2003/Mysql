@@ -77,6 +77,19 @@ select name from instructor where salary>any (select salary from instructor wher
 8 rows in set (0.000 sec)
 -- 7. Find the names of all instructors whose salary is greater than the salary of all instructors in the Biology department.
 SELECT name FROM instructor WHERE salary > ALL (SELECT salary FROM instructor WHERE dept_name = 'Music');
+'Srinivasan'
+'Surae'
+'Smith'
+'Wu'
+'Einstein'
+'El Said'
+'Gold'
+'Katz'
+'Califieri'
+'Singh'
+'Crick'
+'Brandt'
+'Kim'
 -- 8. Find the average instructors’ salaries of those departments where the average salary is greater than 42,000.
 select avg(salary) from instructor group by dept_name having avg(salary)>42000;
 +-----------+-------------+
